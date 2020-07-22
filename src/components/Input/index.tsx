@@ -1,7 +1,8 @@
 import React from "react";
-import {StyleSheet, KeyboardTypeOptions} from "react-native";
+import { KeyboardTypeOptions } from "react-native";
 
 import { Container, Input, Label } from "./styles";
+import { useTheme } from "styled-components";
 
 interface TextFieldProps {
   label: string,
@@ -16,6 +17,7 @@ const TextField: React.FC<TextFieldProps> = ({
   placeholder,
   isPassword = false
 }) => {
+  const theme = useTheme()
   return (
     <Container>
       <Label>{label}</Label>
@@ -23,7 +25,7 @@ const TextField: React.FC<TextFieldProps> = ({
         secureTextEntry={isPassword}
         keyboardType={inputType}
         placeholder={placeholder}
-        placeholderTextColor="rgba(255, 255, 255, 0.4)"
+        placeholderTextColor={theme.placeholderTextColor}
       />
     </Container>
   )
