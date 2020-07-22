@@ -28,7 +28,7 @@ const TextField: React.FC<TextFieldProps> = ({
         placeholderTextColor={theme.placeholderTextColor}
       />
     </Container>
-  )
-}
+  );
+};
 
 export default TextField;

@@ -5,6 +5,7 @@ const darkTheme: DefaultTheme = {
   primaryDarken: '#242423',
   secondary: '#e36414',
   textColor: '#FFF',
+  buttonTextColor: '#FFF',
   placeholderTextColor: 'rgba(255, 255, 255, 0.4)'
 };
 

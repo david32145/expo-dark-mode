@@ -13,7 +13,7 @@ export const Container = styled(RectButton)`
 
 export const Title = styled.Text`
   font-size: 20px;
-  color: ${({theme}) => theme.textColor};
+  color: ${({theme}) => theme.buttonTextColor};
   letter-spacing: 0.6px;
-  font-weight: bold
+  font-weight: bold;
 `;

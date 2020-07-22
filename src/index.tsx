@@ -1,15 +1,17 @@
 import React from "react";
-import MainRoutes from "./routes";
 import { ThemeProvider } from "styled-components";
+import { useColorScheme } from 'react-native-appearance';
+import MainRoutes from "./routes";
 
-import darkTheme from "./themes/dark";
+import getTheme from "./themes";
 
 const MainApplication: React.FC = () => {
+  const isDark = useColorScheme() === "dark";
   return (
-    <ThemeProvider theme={darkTheme}>
+    <ThemeProvider theme={getTheme(isDark)}>
       <MainRoutes />
     </ThemeProvider>
-  )
-}
+  );
+};
 
 export default MainApplication;
